@@ -1,0 +1,2 @@
+#!/bin/bash
+java -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname={{ getv "/jmx/host" }} -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port={{ getv "/jmx/port" }} -jar /opt/jmx_prometheus_httpserver/jmx_prometheus_httpserver.jar {{ getv "/http/port" }} /opt/jmx_prometheus_httpserver/{{ getv "/jmx/exporter/config/file" }}

@@ -1,0 +1,7 @@
+[template]
+src   = "kafka.yml.tmpl"
+dest = "/opt/jmx_prometheus_httpserver/kafka.yml"
+keys = [
+ "/jmx/host",
+ "/jmx/port"
+]

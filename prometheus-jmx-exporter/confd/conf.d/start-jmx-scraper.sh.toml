@@ -1,0 +1,10 @@
+[template]
+src   = "start-jmx-scraper.sh.tmpl"
+dest = "/opt/start-jmx-scraper.sh"
+mode = "0550"
+keys = [
+ "/jmx/host",
+ "/jmx/port",
+ "/http/port",
+ "/jmx/exporter/config/file"
+]

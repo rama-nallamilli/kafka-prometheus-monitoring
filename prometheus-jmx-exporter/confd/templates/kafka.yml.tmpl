@@ -1,0 +1,21 @@
+lowercaseOutputName: true
+jmxUrl: service:jmx:rmi:///jndi/rmi://{{ getv "/jmx/host" }}:{{ getv "/jmx/port" }}/jmxrmi
+rules:
+- pattern : kafka.network<type=Processor, name=IdlePercent, networkProcessor=(.+)><>Value
+- pattern : kafka.network<type=RequestMetrics, name=RequestsPerSec, request=(.+)><>OneMinuteRate
+- pattern : kafka.network<type=SocketServer, name=NetworkProcessorAvgIdlePercent><>Value
+- pattern : kafka.server<type=ReplicaFetcherManager, name=MaxLag, clientId=(.+)><>Value
+- pattern : kafka.server<type=BrokerTopicMetrics, name=(.+), topic=(.+)><>OneMinuteRate
+- pattern : kafka.server<type=KafkaRequestHandlerPool, name=RequestHandlerAvgIdlePercent><>OneMinuteRate
+- pattern : kafka.server<type=Produce><>queue-size
+- pattern : kafka.server<type=ReplicaManager, name=(.+)><>(Value|OneMinuteRate)
+- pattern : kafka.server<type=controller-channel-metrics, broker-id=(.+)><>(.*)
+- pattern : kafka.server<type=socket-server-metrics, networkProcessor=(.+)><>(.*)
+- pattern : kafka.server<type=Fetch><>queue-size
+- pattern : kafka.server<type=SessionExpireListener, name=(.+)><>OneMinuteRate
+- pattern : kafka.controller<type=KafkaController, name=(.+)><>Value
+- pattern : kafka.controller<type=ControllerStats, name=(.+)><>OneMinuteRate
+- pattern : kafka.cluster<type=Partition, name=UnderReplicated, topic=(.+), partition=(.+)><>Value
+- pattern : kafka.utils<type=Throttler, name=cleaner-io><>OneMinuteRate
+- pattern : kafka.log<type=Log, name=LogEndOffset, topic=(.+), partition=(.+)><>Value
+- pattern : java.lang<type=(.*)>
