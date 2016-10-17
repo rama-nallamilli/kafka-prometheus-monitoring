@@ -11,7 +11,8 @@ Dockerised example of monitoring Kafka with Prometheus and Grafana.  Requires do
 docker-compose up
 ```
 
-View Prometheus UI - `http://$DOCKER_HOST_IP:9090`
-Grafana UI - `http://$DOCKER_HOST_IP:3000` (admin:admin)
+- View Prometheus UI - `http://$DOCKER_HOST_IP:9090`
+- Grafana UI - `http://$DOCKER_HOST_IP:3000` (admin:admin)
+- Kafka metrics - `http://$DOCKER_HOST_IP:8080/metrics`
 
 WORK IN PROGRESS
