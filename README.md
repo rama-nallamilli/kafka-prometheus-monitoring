@@ -1,5 +1,5 @@
 # kafka-promethues-monitoring
-Dockerised example of monitoring Kafka with Prometheus and Grafana.  Requires docker and docker-compose.  
+Dockerised example of monitoring Kafka with Prometheus and Grafana.
 
 ## Pre-Requisites
 * install Docker and Docker Compose - https://docs.docker.com/
