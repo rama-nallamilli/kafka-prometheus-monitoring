@@ -1,4 +1,4 @@
-# kafka-promethues-monitoring
+# kafka-prometheus-monitoring
 Dockerised example of monitoring Kafka with Prometheus and Grafana.
 
 ## Pre-Requisites
@@ -23,7 +23,7 @@ cat kafka-messages | docker run -i -a stdin wurstmeister/kafka /opt/kafka_2.11-0
 ```
 
 ### Viewing Prometheus Metrics
-The kafka metrics are pulled in Promethues via the JMX exporter.  These can be viewed in Promethues by navigating to `http://$DOCKER_HOST_IP:9090/graph`, enter a metric name to view the graphs.
+The kafka metrics are pulled in Prometheus via the JMX exporter.  These can be viewed in Prometheus by navigating to `http://$DOCKER_HOST_IP:9090/graph`, enter a metric name to view the graphs.
 
 ![Prometheus UI](images/prometheus-ui.png?raw=true)
 
