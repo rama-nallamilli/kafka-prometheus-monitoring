@@ -1,5 +1,8 @@
 # kafka-prometheus-monitoring
-Dockerised example of monitoring [Apache Kafka](https://kafka.apache.org/) with [Prometheus](https://prometheus.io/) and [Grafana](http://grafana.org/).
+Dockerised example of monitoring [Apache Kafka](https://kafka.apache.org/) with [Prometheus](https://prometheus.io/) and [Grafana](http://grafana.org/).  This project makes use of the prometheus-jmx-exporter which is configured to extract metrics from Kafka's JMX server.  These metrics are then exposed via HTTP GET and polled by Prometheus.
+
+* [kafka.yml](../master/prometheus-jmx-exporter/confd/templates/kafka.yml.tmpl) - Kafka JMX polling configuration
+* [prometheus.yml](../master/mount/prometheus/prometheus.yml) - Prometheus metric polling configuration
 
 ## Pre-Requisites
 * install Docker and Docker Compose - https://docs.docker.com/
