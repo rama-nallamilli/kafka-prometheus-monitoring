@@ -23,12 +23,12 @@ cat kafka-messages | docker run -i -a stdin wurstmeister/kafka /opt/kafka_2.11-0
 ```
 
 ### Viewing Prometheus Metrics
-The kafka metrics are pulled in Prometheus via the JMX exporter.  These can be viewed in Prometheus by navigating to `http://$DOCKER_HOST_IP:9090/graph`, enter a metric name to view the graphs.
+The kafka metrics are pulled into Prometheus via the JMX exporter.  These can be viewed in Prometheus by navigating to `http://$DOCKER_HOST_IP:9090/graph`, enter a metric name to view the graphs.
 
 ![Prometheus UI](images/prometheus-ui.png?raw=true)
 
 ### Viewing Graphs in Grafana
-Grafana can be used to plot the metrics in from Prometheus, navigate to Grafana on `http://$DOCKER_HOST_IP:3000` (admin:admin).  An example dashboard is available to import in `dashboards/Kafka.json`.
+Grafana can be used to build a more meaningful dashboard of the metrics in Prometheus, navigate to Grafana on `http://$DOCKER_HOST_IP:3000` (admin:admin).  An example dashboard is available to import in `dashboards/Kafka.json`.
 
 ![Grafana Kafka Dashboard](images/grafana-ui.png?raw=true)
 
