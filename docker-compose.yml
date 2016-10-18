@@ -2,6 +2,8 @@ zookeeper:
   build: ./zookeeper
   command:
     - "start-foreground"
+  ports:
+    - "2181:2181"
 
 kafka:
   image: wurstmeister/kafka
