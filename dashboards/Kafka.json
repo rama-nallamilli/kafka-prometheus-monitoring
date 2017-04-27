@@ -73,7 +73,7 @@
           },
           "targets": [
             {
-              "expr": "kafka_log_log_value{topic=\"customer\"}",
+              "expr": "sum(kafka_log_log_value{ name=\"LogEndOffset\" , topic = \"customer\" }) - sum(kafka_log_log_value{ name=\"LogStartOffset\", topic = \"customer\" })",
               "intervalFactor": 2,
               "legendFormat": "",
               "metric": "",
@@ -154,7 +154,7 @@
           },
           "targets": [
             {
-              "expr": "kafka_log_log_value{topic=\"audit\"}",
+              "expr": "sum(kafka_log_log_value{ name=\"LogEndOffset\" , topic = \"audit\" }) - sum(kafka_log_log_value{ name=\"LogStartOffset\", topic = \"audit\" })",
               "intervalFactor": 2,
               "legendFormat": "",
               "metric": "",
