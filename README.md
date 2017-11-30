@@ -6,7 +6,7 @@ Dockerised example of monitoring [Apache Kafka](https://kafka.apache.org/) with 
 
 ## Pre-Requisites
 * install Docker and Docker Compose - https://docs.docker.com/
-* set KAFKA_ADVERTISED_HOST_NAME in `docker-compose.yml` to match your docker host IP.  (Note: Do not use localhost or 127.0.0.1 as the host ip if you want to run multiple brokers).  See wurstmeister's docker-kafka for more information on configuring Kafka - https://github.com/wurstmeister/kafka-docker
+* aet KAFKA_ADVERTISED_HOST_NAME in `docker-compose.yml` to match your docker host IP.  (Note: Do not use localhost or 127.0.0.1 as the host ip if you want to run multiple brokers).  See wurstmeister's docker-kafka for more information on configuring Kafka - https://github.com/wurstmeister/kafka-docker
 
 ## Usage
 
